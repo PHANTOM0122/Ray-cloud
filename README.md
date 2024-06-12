@@ -35,9 +35,6 @@ datasets show real-time localization speed as well as enhanced privacy-preservin
 Please refer to PPL repository for a detailed installation guide.
 
 ## Citation
-
-[Summarize your findings and discuss their implications for future research.]
-
 ```bibtex
 @InProceedings{Moon_2024_CVPR,
     author    = {Moon, Heejoon and Lee, Chunghwan and Hong, Je Hyeong},

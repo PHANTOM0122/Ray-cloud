@@ -31,5 +31,26 @@ datasets show real-time localization speed as well as enhanced privacy-preservin
 
 
 ## :running: How to run our code!
-**Our code is the extension of the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June,2023**
+**Our code built upon the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June,2023**
+Please refer to PPL repository for a detailed installation guide.
+
+## Citation
+
+[Summarize your findings and discuss their implications for future research.]
+
+```bibtex
+@InProceedings{Moon_2024_CVPR,
+    author    = {Moon, Heejoon and Lee, Chunghwan and Hong, Je Hyeong},
+    title     = {Efficient Privacy-Preserving Visual Localization Using 3D Ray Clouds},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {9773-9783}
+}
+```
+
+## License
+A patent application for the Raycloud algorithm and the relevant software has been submitted and is under review for registration.
+Raycloud is licensed under the CC-BY-NC-SA-4.0 license limiting any commercial use.
+[PoseLib](https://github.com/vlarsson/PoseLib) is licensed under the BSD 3-Clause license.
 

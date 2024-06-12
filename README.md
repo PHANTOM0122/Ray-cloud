@@ -1,14 +1,14 @@
 # Ray-cloud 
 
 ## [CVPR 2024] Efficient Privacy-Preserving Visual Localization Using 3D Ray Clouds
-**Authors:** Heejoon Moon, [Chunghwan Lee](https://github.com/Fusroda-h), [Je Hyeong Hong](https://sites.google.com/view/hyvision)
+**Authors:** [Heejoon Moon](https://github.com/PHANTOM0122), [Chunghwan Lee](https://github.com/Fusroda-h), [Je Hyeong Hong](https://sites.google.com/view/hyvision)
 
 *************************************
 ### :rocket: **News** 
 :fire: We release the initial version of our implementation. We're now cleaning our code and keep stay tuned for the final release!
 
 *************************************
-:page_with_curl: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] 
+:page_with_curl: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] \[[Supplementary document](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Moon_Efficient_Privacy-Preserving_Visual_CVPR_2024_supplemental.pdf)] 
 <br/>
 **Presentation video:** [![Youtube Badge](https://img.shields.io/badge/Youtube-ff0000?style=flat-square&logo=youtube&link=https://www.youtube.com/channel/UCkWMYftPuCZSBy34Od8KpEw)](https://www.youtube.com/watch?v=oECeygDJ5rY)
 

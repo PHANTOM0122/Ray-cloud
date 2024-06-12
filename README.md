@@ -8,8 +8,9 @@
 :fire: We release the initial version of our implementation. We're now cleaning our code and keep stay tuned for the final release!
 
 *************************************
-:grapes: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] <br/>
-:grapes: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] <br/>
+:page_with_curl: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] 
+<br/>
+**Presentation video:** [![Youtube Badge](https://img.shields.io/badge/Youtube-ff0000?style=flat-square&logo=youtube&link=https://www.youtube.com/channel/UCkWMYftPuCZSBy34Od8KpEw)](https://www.youtube.com/watch?v=oECeygDJ5rY)
 
 **Abstract:** The recent success in revealing scene details from sparse 3D point clouds obtained via structure-from-motion has
 raised significant privacy concerns in visual localization.

@@ -5,7 +5,7 @@
 
 *************************************
 ### :rocket: **News** 
-:fire: [2024.06.13] We release the initial version of our implementation. We're now cleaning our code and keep stay tuned for the final release!
+:fire: [2024.06.13] We're now working on releasing our code and please keep stay tuned for the final release!
 
 *************************************
 :page_with_curl: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] \[[Supplementary document](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Moon_Efficient_Privacy-Preserving_Visual_CVPR_2024_supplemental.pdf)] 
@@ -31,8 +31,9 @@ datasets show real-time localization speed as well as enhanced privacy-preservin
 
 
 ## :running: How to run our code!
-**Our code built upon the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June,2023**
-Please refer to PPL repository for a detailed installation guide.
+**Our code built upon the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June, 2023**. </br>
+We borrowed the implementation of localization and inversion framework from PPL repository. </br>
+Thanks to [Chunghwan Lee](https://github.com/Fusroda-h) for your contribution. </br>
 
 ## Citation
 ```bibtex

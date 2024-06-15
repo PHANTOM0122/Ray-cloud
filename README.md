@@ -28,6 +28,10 @@ of the modified attack. Experimental results on two public
 datasets show real-time localization speed as well as enhanced privacy-preserving capability over the state-of-theart without overly sacrificing the localization accuracy.
 *************************************
 
+## :white_check_mark: Two public datasets!	
+- Indoor (**_Energy landscape_**): [Learning to navigate the energy landscape](https://graphics.stanford.edu/projects/reloc/) </br>
+- Outdoor (**_Cambridge_**): [Cambridge Landmarks](https://www.repository.cam.ac.uk/items/53788265-cb98-42ee-b85b-7a0cbc8eddb3)
+
 ## :running: How to run our code!
 **Our code built upon the [repository of Paired-Point Lifting(PPL), CVPR2023](https://github.com/Fusroda-h/ppl/tree/main), accessed at June, 2023**. </br>
 We borrowed most of the implementation of localization and inversion framework from PPL repository. </br>
@@ -39,7 +43,7 @@ Make a new folder `/Myfolder`.
 Make a docker container that fits your environment with a python version 3.9.
 Mount the docker volume with the `-v /Myfolder/:/workspace/`.
 
-Clone the git `git clone https://github.com/Fusroda-h/Ray-cloud`
+Clone the git `git clone https://github.com/PHANTOM0122/Ray-cloud`
 Download `eigen-3.4.0.tar.gz` library from https://eigen.tuxfamily.org/index.php?title=Main_Page to run poselib.
 
 ```bash
@@ -48,7 +52,7 @@ wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
 ```
 
 To properly build `poselib`, download the rest of the folders from the [PoseLib](https://github.com/vlarsson/PoseLib).
-We only uploaded the customized code from PoseLib implementing P6L solver.
+We only uploaded the customized code from PoseLib implementing P6L and P5+1R solver.
 
 ```bash
 cd ..
@@ -83,15 +87,14 @@ Refer to this [ISSUE](https://github.com/pytorch/pytorch/issues/77939#issue-1242
 Edit the bash file `start.sh` so that Poselib is compiled with `gcc-11` $-$ substitute `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install`
 to `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install -DCMAKE_C_COMPILER=/usr/bin/gcc-11 -DCMAKE_CXX_COMPILER=/usr/bin/g++-11`.
 
-
 If you have other problems in building the packages.
 Visit installation each page, s.t. [PoseLib](https://github.com/vlarsson/PoseLib), [Ceres-solver](http://ceres-solver.org/installation.html), [COLMAP](https://colmap.github.io/install.html).
 Ubuntu and CUDA version errors might occur.
 
 The codes `database.py` and `read_write_model.py` is from [COLMAP](https://github.com/colmap/colmap).
-
 - **Run the main code (pose estimation, recovering point, restoring image at once)**
 
+:white_check_mark:	
 You can download example dataset on [Sample_data](https://1drv.ms/u/s!AlaAkmWU9TVG6yIqNBD0PlN43Ewe?e=2gIN1F).
 Directories are organized like below.
 ```bash
@@ -104,9 +107,9 @@ Directories are organized like below.
 │      ├─sparse_maponly
 │      └─sparse_queryadded
 ```
-The construction of map and queries are explained in [supplementary materials](documents/Lee_et_al_cvpr23_supplemat.pdf).
+The construction of map and queries are explained in [here](documents/Lee_et_al_cvpr23_supplemat.pdf).
 
-To generate the PPL-based line cloud and to estimate pose & recover the point cloud from this
+:point_right: To generate the each type of line cloud and to estimate pose & recover the point cloud from this
 
 ```
 /usr/local/bin/python main.py

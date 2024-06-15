@@ -5,7 +5,7 @@
 
 *************************************
 ### :rocket: **News** 
-:fire: [2024.06.13] We're now working on releasing our code and please keep stay tuned for the final release!
+:fire: [2024.06.15] We're releasing our intitial code and now working on cleaning our code. Please keep stay tuned for the final release!
 
 *************************************
 :page_with_curl: \[[Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Moon_Efficient_Privacy-Preserving_Visual_Localization_Using_3D_Ray_Clouds_CVPR_2024_paper.pdf)] \[[Supplementary document](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Moon_Efficient_Privacy-Preserving_Visual_CVPR_2024_supplemental.pdf)] 

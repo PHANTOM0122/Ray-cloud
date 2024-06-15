@@ -28,12 +28,98 @@ of the modified attack. Experimental results on two public
 datasets show real-time localization speed as well as enhanced privacy-preserving capability over the state-of-theart without overly sacrificing the localization accuracy.
 *************************************
 
-
-
 ## :running: How to run our code!
 **Our code built upon the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June, 2023**. </br>
-We borrowed the implementation of localization and inversion framework from PPL repository. </br>
+We borrowed most of the implementation of localization and inversion framework from PPL repository. </br>
 Thanks to [Chunghwan Lee](https://github.com/Fusroda-h) for your contribution. </br>
+
+- **Environment setting**
+
+Make a new folder `/Myfolder`.
+Make a docker container that fits your environment with a python version 3.9.
+Mount the docker volume with the `-v /Myfolder/:/workspace/`.
+
+Clone the git `git clone https://github.com/Fusroda-h/Ray-cloud`
+Download `eigen-3.4.0.tar.gz` library from https://eigen.tuxfamily.org/index.php?title=Main_Page to run poselib.
+
+```bash
+cd Ray-cloud
+wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+```
+
+To properly build `poselib`, download the rest of the folders from the [PoseLib](https://github.com/vlarsson/PoseLib).
+We only uploaded the customized code from PoseLib implementing P6L solver.
+
+```bash
+cd ..
+git clone https://github.com/PoseLib/PoseLib.git
+# Checkout to the version before refactoring "pybind"
+cd PoseLib
+git checkout ce7bf181731e4045f990c7e90e93716fe7465d56
+# Overwrite customized local poselib to cloned poselib
+# And move back to original directory
+cd ../
+cp -rf Ray-cloud/PoseLib/* PoseLib/
+rm -r Ray-cloud/PoseLib
+mv PoseLib Ray-cloud/PoseLib
+```
+
+Since InvSfM code by Pittaluga et al. is written in tensorflow.v1, Chanhyuk Yun rewritten the whole code to pytorch for the ease of use ([invsfm_torch](https://github.com/ChanhyukYun/invSfM_torch)).
+Download pretrained weights from [InvSfM](https://github.com/francescopittaluga/invsfm).
+Position the `wts` folder to `utils/invsfm/wts`.
+Then, our code will automatically change the weights to torch version and utilize it.
+
+```bash
+cd ppl
+bash start.sh
+```
+
+cf) If you suffer from an initialization error with the message: `avx512fintrin.h:198:11: note: ‘__Y’ was declared here`.
+
+Refer to this [ISSUE](https://github.com/pytorch/pytorch/issues/77939#issue-1242584624) and install with GCC-11
+
+`apt-get install gcc-11 g++-11`
+
+Edit the bash file `start.sh` so that Poselib is compiled with `gcc-11` $-$ substitute `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install`
+to `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install -DCMAKE_C_COMPILER=/usr/bin/gcc-11 -DCMAKE_CXX_COMPILER=/usr/bin/g++-11`.
+
+
+If you have other problems in building the packages.
+Visit installation each page, s.t. [PoseLib](https://github.com/vlarsson/PoseLib), [Ceres-solver](http://ceres-solver.org/installation.html), [COLMAP](https://colmap.github.io/install.html).
+Ubuntu and CUDA version errors might occur.
+
+The codes `database.py` and `read_write_model.py` is from [COLMAP](https://github.com/colmap/colmap).
+
+- **Run the main code (pose estimation, recovering point, restoring image at once)**
+
+You can download example dataset on [Sample_data](https://1drv.ms/u/s!AlaAkmWU9TVG6yIqNBD0PlN43Ewe?e=2gIN1F).
+Directories are organized like below.
+```bash
+├─Dataset_type (energy, cambridge)
+│  └─Scene (apt1_living, kingscolledge)
+│      ├─bundle_maponly
+│      ├─images_maponly
+│      ├─query
+│      ├─sparse_gt
+│      ├─sparse_maponly
+│      └─sparse_queryadded
+```
+The construction of map and queries are explained in [supplementary materials](documents/Lee_et_al_cvpr23_supplemat.pdf).
+
+To generate the PPL-based line cloud and to estimate pose & recover the point cloud from this
+
+```
+/usr/local/bin/python main.py
+```
+
+You can change your options with the parser in `main.py`.
+Or else can manipulate the miute options with `static/variable.py`.
+
+The results are stored in `output` folder.
+In the folder, recovered point clouds, pose errors, and recovered image qualities are stored in `Dataset_name/Scene/L2Precon`,`Dataset_name/Scene/PoseAccuracy`,`Dataset_name/Scene/Quality` respectively.
+The recovered images will be saved in `dataset/Dataset_name/Scene/invsfmIMG/`.
+
+
 
 ## Citation
 ```bibtex

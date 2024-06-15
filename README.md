@@ -2,6 +2,7 @@
 
 ## [CVPR 2024] Efficient Privacy-Preserving Visual Localization Using 3D Ray Clouds
 **Authors:** [Heejoon Moon](https://github.com/PHANTOM0122), [Chunghwan Lee](https://github.com/Fusroda-h), [Je Hyeong Hong](https://sites.google.com/view/hyvision)
+[fig1_c_new.pdf](https://github.com/user-attachments/files/15845775/fig1_c_new.pdf)
 
 *************************************
 ### :rocket: **News** 

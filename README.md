@@ -2,7 +2,8 @@
 
 ## [CVPR 2024] Efficient Privacy-Preserving Visual Localization Using 3D Ray Clouds
 **Authors:** [Heejoon Moon](https://github.com/PHANTOM0122), [Chunghwan Lee](https://github.com/Fusroda-h), [Je Hyeong Hong](https://sites.google.com/view/hyvision)
-[fig1_c_new.pdf](https://github.com/user-attachments/files/15845775/fig1_c_new.pdf)
+
+<img src=https://github.com/PHANTOM0122/Ray-cloud/assets/50229148/d1b077fc-d4b4-429a-a8a8-d142d4b6d4de width="400" height="200"> <img src=https://github.com/PHANTOM0122/Ray-cloud/assets/50229148/f67d0db4-fec3-4cb3-b018-6d851753f6ea width="400" height="200">
 
 *************************************
 ### :rocket: **News** 
@@ -44,7 +45,7 @@ Make a new folder `/Myfolder`.
 Make a docker container that fits your environment with a python version 3.9.
 Mount the docker volume with the `-v /Myfolder/:/workspace/`.
 
-Clone the git `git clone https://github.com/PHANTOM0122/Ray-cloud`
+:point_right: Clone the git `git clone https://github.com/PHANTOM0122/Ray-cloud`
 Download `eigen-3.4.0.tar.gz` library from https://eigen.tuxfamily.org/index.php?title=Main_Page to run poselib.
 
 ```bash
@@ -52,7 +53,7 @@ cd Ray-cloud
 wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
 ```
 
-To properly build `poselib`, download the rest of the folders from the [PoseLib](https://github.com/vlarsson/PoseLib).
+:point_right: To properly build `poselib`, download the rest of the folders from the [PoseLib](https://github.com/vlarsson/PoseLib).
 We only uploaded the customized code from PoseLib implementing P6L and P5+1R solver.
 
 ```bash
@@ -69,7 +70,7 @@ rm -r Ray-cloud/PoseLib
 mv PoseLib Ray-cloud/PoseLib
 ```
 
-Since InvSfM code by Pittaluga et al. is written in tensorflow.v1, Chanhyuk Yun rewritten the whole code to pytorch for the ease of use ([invsfm_torch](https://github.com/ChanhyukYun/invSfM_torch)).
+:point_right: Since InvSfM code by Pittaluga et al. is written in tensorflow.v1, Chanhyuk Yun rewritten the whole code to pytorch for the ease of use ([invsfm_torch](https://github.com/ChanhyukYun/invSfM_torch)).
 Download pretrained weights from [InvSfM](https://github.com/francescopittaluga/invsfm).
 Position the `wts` folder to `utils/invsfm/wts`.
 Then, our code will automatically change the weights to torch version and utilize it.
@@ -79,12 +80,9 @@ cd Ray-cloud
 bash start.sh
 ```
 
-cf) If you suffer from an initialization error with the message: `avx512fintrin.h:198:11: note: ‘__Y’ was declared here`.
-
+:warning: If you suffer from an initialization error with the message: `avx512fintrin.h:198:11: note: ‘__Y’ was declared here`.
 Refer to this [ISSUE](https://github.com/pytorch/pytorch/issues/77939#issue-1242584624) and install with GCC-11
-
 `apt-get install gcc-11 g++-11`
-
 Edit the bash file `start.sh` so that Poselib is compiled with `gcc-11` $-$ substitute `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install`
 to `cmake -S . -B _build/ -DPYTHON_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=_install -DCMAKE_C_COMPILER=/usr/bin/gcc-11 -DCMAKE_CXX_COMPILER=/usr/bin/g++-11`.
 

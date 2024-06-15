@@ -37,7 +37,7 @@ Thanks to [Chunghwan Lee](https://github.com/Fusroda-h) for your contribution. <
 
 ## Citation
 ```bibtex
-@InProceedings{Moon_2024_CVPR,
+@InProceedings{moon2024raycloud,
     author    = {Moon, Heejoon and Lee, Chunghwan and Hong, Je Hyeong},
     title     = {Efficient Privacy-Preserving Visual Localization Using 3D Ray Clouds},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},

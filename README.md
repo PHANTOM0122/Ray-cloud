@@ -29,7 +29,7 @@ datasets show real-time localization speed as well as enhanced privacy-preservin
 *************************************
 
 ## :running: How to run our code!
-**Our code built upon the [repository of Paired-Point Lifting (CVPR2023)](https://github.com/Fusroda-h/ppl/tree/main), accessed at June, 2023**. </br>
+**Our code built upon the [repository of Paired-Point Lifting(PPL), CVPR2023](https://github.com/Fusroda-h/ppl/tree/main), accessed at June, 2023**. </br>
 We borrowed most of the implementation of localization and inversion framework from PPL repository. </br>
 Thanks to [Chunghwan Lee](https://github.com/Fusroda-h) for your contribution. </br>
 
@@ -70,7 +70,7 @@ Position the `wts` folder to `utils/invsfm/wts`.
 Then, our code will automatically change the weights to torch version and utilize it.
 
 ```bash
-cd ppl
+cd Ray-cloud
 bash start.sh
 ```
 
@@ -119,8 +119,6 @@ The results are stored in `output` folder.
 In the folder, recovered point clouds, pose errors, and recovered image qualities are stored in `Dataset_name/Scene/L2Precon`,`Dataset_name/Scene/PoseAccuracy`,`Dataset_name/Scene/Quality` respectively.
 The recovered images will be saved in `dataset/Dataset_name/Scene/invsfmIMG/`.
 
-
-
 ## Citation
 ```bibtex
 @InProceedings{moon2024raycloud,
@@ -134,7 +132,7 @@ The recovered images will be saved in `dataset/Dataset_name/Scene/invsfmIMG/`.
 ```
 
 ## License
-A patent application for the Raycloud algorithm and the relevant software has been submitted and is under review for registration.
+A patent application for the Raycloud algorithm and the relevant software has been submitted and is under review for registration(PCT).
 Raycloud is licensed under the CC-BY-NC-SA-4.0 license limiting any commercial use.
 [PoseLib](https://github.com/vlarsson/PoseLib) is licensed under the BSD 3-Clause license.
 
